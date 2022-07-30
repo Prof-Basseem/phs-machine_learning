@@ -1,0 +1,63 @@
+<!--  machine learning html form uploud image for prediction -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--  link bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--  link css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!--  favicon.ico   -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+<!--  navbar -->
+    <nav class="navbar nav-pills ">
+            <button type="button" id="btn-open" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar">ـــــــ</span>
+                <span class="icon-bar">ـــــــ</span>
+                <span class="icon-bar">ـــــــ</span>
+                <br>
+            </button>
+            <button type="button" id="btn-close" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar">&#x2715</span>
+            </button>
+                <br>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" width="50px">
+                </a>
+            </div>
+            
+
+            <div>
+                <ul class="nav navbar-nav" id="navbar">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('upload') }}">Upload image</a></li>
+                    <li><a href="{{ url_for('camera') }}">Camera</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div> 
+    <br>    
+    <footer class="bg-dark text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.901); padding: 50px; color: white;">
+            <span class="text-muted" style="color: white;">Copyright &copy; 2022 | </span>
+          <a class="text-dark" style="color: white;"  href="{{ url_for('index') }}">pHs prediction</a>
+        </div>
+    </footer>
+
+<!--  link bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--  link js -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>  

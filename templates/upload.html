@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-md-12 center">
+    <form action="{{ '/predict' }}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="image"> 
+                <h2>Upload image</h2>
+            </label>
+            <br><br>
+            <input type="file" name="image" id="image" class="form-control">
+        </div>
+        <br>
+        <!-- select option of three models (1. model 2. model_M 3. mode_D) -->
+        <div class="form-group">
+            <h4 style="text-align: left;">Select model</h4>
+            <select name="model" id="model" class="form-control">
+                <option value="model">Model_B</option>
+                <option value="model_M">Model_M</option>
+                <option value="model_D">Mode_D</option>
+            </select>
+        </div>
+        <br><br><br>
+        <div class="form-group">
+            <input type="submit" value="Upload" class="btn btn-dark">
+        </div>
+    </form>
+    <br>
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <ul>
+            <li>&#x2714- Click on the Choose File button to upload the image, then click on the Upload button to predict the pH value.</li>
+            <br>
+            <li>&#x2714- Select model: Model_B for Brightness, Model_M for Medium, Mode_D for Dark.</li>
+        </ul>
+    </div>
+</div>
+<br><br>
+{% endblock %}
+            

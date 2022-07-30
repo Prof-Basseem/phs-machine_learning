@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}  
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1>pHs prediction</h1>
+                    <h3>You can predict the pH of a solution by choosing from the following options:</h3>   
+                </div>          
+    <!--                      two applicatio: upload image and capture by camera -->
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4" id="box">
+                            <h3>Upload image</h3>
+                            <a href="{{ '/upload' }}" class="btn btn-primary">
+                                <img src="{{ '/static/images/upload.png' }}" width="150" height="150" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-4" id="box">
+                            <h3>Camera capture</h3>
+                            <a href="{{ '/camera' }}" class="btn btn-primary">
+                                <img src="{{ '/static/images/capture.jpg' }}" width="150" height="150" alt="">
+                            </a>
+                        </div>
+
+                    <br>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

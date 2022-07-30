@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-md-12 center">
+    <h2>Camera capture</h2>
+    <form action="{{ '/camera' }}" method="post" enctype="multipart/form-data">
+        <h4 style="text-align: left;">Select model</h4>
+        <select name="model" id="model" class="form-control">
+            <option value="model">Model_B</option>
+            <option value="model_M">Model_M</option>
+            <option value="model_D">Mode_D</option>
+        </select>
+        <br><br><br>
+        <button type="submit" class="btn btn-dark" id= "capture" value="Capture" name="click">
+            Capture
+        </button>
+        
+        <button type="submit" class="btn btn-dark" id= "stop" value="Stop" name="stop">
+            Stop
+        </button>
+   
+    </form>
+    <br>
+    <!--  load the image from server if condition  is true -->
+    {% if prediction_text %}
+    <img  src="{{ url_for('static', filename='images/image.jpg') }}" width="250" height="250" alt="">
+    <br><br>
+    <h2>The pH value is:{{ prediction_text }}</h2>
+    {% endif %} 
+    <!--  Instructions  -->
+    <br>
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <ul>
+            <li>&#x2714- Select model: Model_B for Brightness, Model_M for Medium, Mode_D for Dark.</li>
+            <br>
+            <li>&#x2714- Click on the camera button to capture the image and predict the pH value.</li>
+            <br>
+            <li>&#x2714- Click on the stop button to stop the camera and return to the home page.</li>
+        </ul>
+    </div>
+</div>
+<br><br>
+{% endblock %}
+        
+        

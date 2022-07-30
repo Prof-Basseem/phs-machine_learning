@@ -1,0 +1,151 @@
+*{
+    font-size : 1.14em;
+    margin : 0;
+    padding : 0; 
+    font-family : 'Roboto', sans-serif; 
+}
+body {
+    font-family : sans-serif;
+    font-size : 1em;
+    margin : 0;
+    padding : 0;
+    text-align: center;
+
+}
+h1 {
+    font-size : 2em;
+    font-weight : bold;
+    margin : 0;
+    padding : 20 0px;
+    color : #000C19;
+        
+}
+h2 {
+    font-size : 1.8em;
+    font-weight : bold;
+    margin : 0;
+    padding : 0;
+    color: #000C19  ;
+}
+h3  {
+    /* line spacing */
+    line-height : 1.5em;
+}
+
+.card-body {
+    margin : 0 auto;
+    width : 100%;
+    text-align : center;
+    display : flex;
+    flex-direction : row;
+    justify-content : space-around;
+    align-items : center;
+}
+#box {
+    width : 370px;
+    background-color : #000C19;
+    border-radius : 10px;
+    margin : 10px;
+    padding : 5px;
+    display : flex;
+    text-align : center;
+    flex-direction : row;
+    justify-content : space-around;
+    align-items : center;
+    font-size : 1.0em;
+    font-weight : bold;
+    color : white;
+    box-shadow : 2px 2px 2px black;
+}
+
+/* button */
+.btn-dark {
+    background-color: #007BFF;
+    border-color: #007BFF;
+    color: white;
+    font-size: 1.3em;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    width: 120px;
+    margin-left: 20px;
+}
+/* button:hover */
+
+/* navbar */
+.navbar {
+    background-color: #000C19;
+    background-origin: padding-box;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+/*navbar links color white*/
+.navbar a {
+    color: white;
+    
+}.navbar a:hover {
+    color: #007BFF;
+}.navbar a:active {
+    color: #007BFF;
+}
+#btn-navbar {
+    color: white;
+    font-size: 1.3em;
+    padding-bottom: 1%;
+    padding-top: 1%;
+
+}
+#btn-open {
+    color: white;
+    font-size: 1.3em;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+#btn-close {
+    color: white;
+    font-size: 1.3em;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+/* footer */
+footer {
+    background-color: #007BFF;
+    border-color: #007BFF;
+    color: white;
+    font-size: 1.4em;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    width: 100%;
+    margin-left: 0;
+}
+/*instructions */
+.instructions {
+    font-size : 0.9em;
+    font-weight : bold;
+    color : #000C19;
+    text-align: left;
+    margin-left: 20px;
+    box-shadow : 2px 2px 2px #000C19;
+    background-color: rgb(209, 229, 246);
+    padding: 10px;
+    border-radius: 10px;
+    
+}.instructions ul {
+    list-style-type : none; 
+    text-align: left;
+}
+/*upload */
+.form-control {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1.0em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
